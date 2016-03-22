@@ -19,11 +19,3 @@ before_script:
   - cd $ORIG_FOLDER
 
 script: mkdir -p build; cd build; cmake --version && cmake -D CMAKE_C_FLAGS="-I $LIBPREDICT_INCLUDE_PATH -L $LIBPREDICT_LIBRARY_PATH" .. && make
-
-notifications:
-  email: false
-  irc:
-    channels:
-      - "irc.oftc.net#libpredict"
-    use_notice: true
-    skip_join: true
